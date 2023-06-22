@@ -1,0 +1,244 @@
+body.lock {
+  overflow: hidden;
+}
+
+.header {
+  min-width: 320px;
+  margin: auto;
+  padding: 24px;
+  background-image: url(../img/hero-background.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 100%;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: auto;
+}
+
+.nav-logo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+/*CURRENT TIME*/
+.header-clock {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.hidden {
+  display: none;
+}
+
+/*TIMER UNTIL CHRISTMAS*/
+.header-christmas {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.header-christmas > span {
+  color: var(--secondary-text-color);
+}
+
+/*TIMER OF WAR*/
+.days-of-war {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+/*COUNT OF KILLED ORKS*/
+.count-of-killed-orks {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+/*INCREASE OF KILLED ORKS*/
+.increase-of-killed-orks {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+/*BURGER MENU*/
+.nav-burger {
+  display: block;
+  position: absolute;
+  right: 10px;
+  width: 24px;
+  height: 22px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.nav-burger span,
+.nav-burger::before,
+.nav-burger::after {
+  position: absolute;
+  left: 0;
+  height: 2.5px;
+  width: 100%;
+  background-color: var(--primary-text-color);
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-burger span {
+  transform: scale(1);
+}
+
+.nav-burger::before,
+.nav-burger::after {
+  content: " ";
+}
+
+.nav-burger::before {
+  top: 0;
+}
+
+.nav-burger::after {
+  bottom: 0;
+}
+
+.nav-burger.active span {
+  transform: scale(0);
+}
+
+.nav-burger.active::before {
+  top: 50%;
+  transform: rotate(-405deg);
+}
+
+.nav-burger.active::after {
+  bottom: 40%;
+  transform: rotate(405deg);
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-background-color);
+  z-index: 2;
+  padding: 15px 24px 50px 24px;
+  transition: top 0.3s ease-in 0.1s;
+  overflow: hidden;
+  margin: auto;
+}
+
+.nav-wrapper.active {
+  top: 0;
+}
+
+.header__nav.active {
+  top: 0;
+}
+
+.nav-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  z-index: 10;
+  padding-top: 100px;
+  padding-inline-start: 0px;
+}
+
+.header__logo-image {
+  width: 174px;
+  height: 59.2px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  margin: auto;
+}
+
+.nav-menu__item {
+  margin: auto 10px;
+  text-align: center;
+  list-style: none;
+  line-height: 42px;
+}
+
+.nav-menu__link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  color: inherit;
+  font-family: var(--primary-font);
+}
+
+.nav-menu__link:hover {
+  color: var(--secondary-text-color);
+}
+
+@media (min-width: 991px) {
+  body.lock {
+    overflow: visible;
+  }
+
+  .header {
+  max-width: 1200px;
+  }
+
+  .nav-menu {
+    flex-direction: row;
+    padding-top: 0;
+  }
+
+  .nav-logo {
+    min-width: 385px;
+  }
+
+  .header-christmas,
+  .days-of-war,
+  .count-of-killed-orks,
+  .increase-of-killed-orks {
+  display: none;
+  }
+
+  .nav-menu__link {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .nav-burger {
+    display: none;
+  }
+
+  .nav-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: transparent;
+    z-index: 10;
+  }
+
+  .nav-menu__link {
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: normal;
+  }
+}

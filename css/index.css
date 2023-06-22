@@ -1,0 +1,17 @@
+@import url(common.css);  /* загальні стилі */
+@import url(controls.css);  /* кнопки */
+
+@import url(header.css); 
+@import url(hero.css);
+@import url(about.css);
+@import url(works.css);
+@import url(services.css);
+@import url(why.css);     
+@import url(testimonials.css);
+@import url(collaboration.css);
+@import url(pricing.css);
+@import url(portfolio.css);
+@import url(glider.css);
+@import url(faq.css);
+@import url(form.css);
+@import url(footer.css);
